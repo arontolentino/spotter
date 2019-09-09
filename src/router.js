@@ -1,6 +1,7 @@
 import Vue from "vue";
 import { IonicVueRouter } from "@ionic/vue";
 import NavLayout from "./layouts/NavLayout.vue";
+import Login from "./views/Login.vue";
 import Entries from "./views/Entries.vue";
 
 Vue.use(IonicVueRouter);
@@ -12,6 +13,11 @@ export default new IonicVueRouter({
     {
       path: "/",
       redirect: "/entries"
+    },
+    {
+      path: "/login",
+      name: "login",
+      component: Login
     },
     {
       path: "/nav",

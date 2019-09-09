@@ -9,10 +9,10 @@ import { Plugins, StatusBarStyle } from "@capacitor/core";
 const { SplashScreen, StatusBar, Network } = Plugins;
 
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faPlus } from "@fortawesome/free-solid-svg-icons";
+import { faPlus, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
-library.add(faPlus);
+library.add(faPlus, faArrowLeft);
 
 Vue.component("font-awesome-icon", FontAwesomeIcon);
 
