@@ -1,0 +1,7 @@
+{
+  "appId": "com.spotter.app",
+  "appName": "Spotter",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "dist"
+}
