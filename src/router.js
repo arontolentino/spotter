@@ -12,7 +12,7 @@ export default new IonicVueRouter({
   routes: [
     {
       path: "/",
-      redirect: "/entries"
+      redirect: "/login"
     },
     {
       path: "/login",

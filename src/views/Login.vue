@@ -20,17 +20,21 @@
 
             <div class="form-content"></div>
             <ion-item lines="none">
-              <ion-input type="email" placeholder="Email"></ion-input>
+              <ion-input type="email" placeholder="Email" @ionInput="email = $event.target.value"></ion-input>
             </ion-item>
 
             <ion-item lines="none">
-              <ion-input type="password" placeholder="Password"></ion-input>
+              <ion-input
+                type="password"
+                placeholder="Password"
+                @ionInput="password = $event.target.value"
+              ></ion-input>
             </ion-item>
 
-            <ion-button class="form-button" size="medium" expand="block">Sign In</ion-button>
+            <ion-button class="form-button" size="medium" expand="block" @click="logIn">Sign In</ion-button>
           </div>
 
-          <div class="form-footer">
+          <div class="form-footer" text-center>
             <p>Not registered yet? Create an account</p>
           </div>
         </ion-col>
@@ -40,18 +44,37 @@
 </template>
 
 <script>
-export default {};
+export default {
+  name: "Login",
+  data() {
+    return {
+      email: "",
+      password: ""
+    };
+  },
+  methods: {
+    logIn() {
+      console.log(this.email);
+      console.log(this.password);
+      this.$store.dispatch("logIn", {
+        email: this.email,
+        password: this.password
+      });
+    }
+  }
+};
 </script>
 
 <style scoped>
 .back {
+  padding-top: env(safe-area-inset-top);
+  margin-top: env(safe-area-inset-top);
   position: absolute;
-  height: 56px;
   color: white;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 16px;
+  margin-left: 24px;
   font-size: 1.3em;
 }
 
