@@ -5,6 +5,8 @@ import store from "./store";
 import Ionic from "@ionic/vue";
 import "@ionic/core/css/ionic.bundle.css";
 
+import "@/firebase/index.js";
+
 import { Plugins, StatusBarStyle } from "@capacitor/core";
 const { SplashScreen, StatusBar, Network } = Plugins;
 
