@@ -36,17 +36,17 @@ export default new Vuex.Store({
           commit("setIsAuthenticated", true);
           console.log("User registered!");
 
-          fb.usersCollection
-            .doc(state.user.user.uid)
-            .set({
-              username,
-              email
-            })
-            .then(() => {
-              console.log("Additional user details added!");
-            });
+          // fb.usersCollection
+          //   .doc(state.user.user.uid)
+          //   .set({
+          //     username,
+          //     email
+          //   })
+          //   .then(() => {
+          //     console.log("Additional user details added!");
+          //   });
 
-          router.push("/sign-in");
+          router.push("/login");
         })
         .catch(error => {
           commit("setUser", null);

@@ -1,7 +1,7 @@
 <template>
   <ion-content class="ion-text-left">
     <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-      <ion-fab-button color="success">
+      <ion-fab-button color="success" @click="openModal">
         <font-awesome-icon icon="plus" />
       </ion-fab-button>
     </ion-fab>
@@ -87,8 +87,27 @@
 </template>
 
 <script>
+import Modal from "./Modal.vue";
+
 export default {
-  name: "Test"
+  name: "Entries",
+  methods: {
+    openModal() {
+      return this.$ionic.modalController
+        .create({
+          component: Modal,
+          componentProps: {
+            data: {
+              content: "New Content"
+            },
+            propsData: {
+              title: "New title"
+            }
+          }
+        })
+        .then(m => m.present());
+    }
+  }
 };
 </script>
 

@@ -15,7 +15,7 @@
 
           <div class="form" padding>
             <div class="form-title" text-center>
-              <h4>Welcome Back</h4>
+              <h4>Create Account</h4>
             </div>
 
             <div class="form-content"></div>
@@ -31,13 +31,18 @@
               ></ion-input>
             </ion-item>
 
-            <ion-button class="form-button" size="medium" expand="block" @click="logIn">Sign In</ion-button>
+            <ion-button class="form-button" size="medium" expand="block" @click="signUp">Register</ion-button>
           </div>
 
           <div class="form-footer" text-center>
             <p>
-              Not registered yet?
-              <router-link to="/register" style="color: #00C853">Create an account</router-link>
+              By creating an account, you agree to the Spotter
+              <span>
+                <router-link to="/" style="color: #00C853">Terms of Service</router-link>
+              </span> and
+              <span>
+                <router-link to="/" style="color: #00C853">Privacy Policy.</router-link>
+              </span>
             </p>
           </div>
         </ion-col>
@@ -56,10 +61,10 @@ export default {
     };
   },
   methods: {
-    logIn() {
+    signUp() {
       console.log(this.email);
       console.log(this.password);
-      this.$store.dispatch("logIn", {
+      this.$store.dispatch("signUp", {
         email: this.email,
         password: this.password
       });
