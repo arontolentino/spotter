@@ -106,6 +106,10 @@ export default {
           }
         })
         .then(m => m.present());
+    },
+
+    dismissModal() {
+      return this.$ionic.modalController.dismiss();
     }
   }
 };
