@@ -1,7 +1,7 @@
 <template>
   <ion-content class="ion-text-left">
     <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-      <ion-fab-button color="success" @click="openModal">
+      <ion-fab-button color="success" @click="$router.push({name: 'add-workout'})">
         <font-awesome-icon icon="plus" />
       </ion-fab-button>
     </ion-fab>

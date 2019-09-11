@@ -34,7 +34,7 @@
             <ion-button class="form-button" size="medium" expand="block" @click="signUp">Register</ion-button>
           </div>
 
-          <div class="form-footer" text-center>
+          <div class="form-footer ion-padding" text-center>
             <p>
               By creating an account, you agree to the Spotter
               <span>

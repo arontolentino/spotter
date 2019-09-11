@@ -34,7 +34,7 @@
             <ion-button class="form-button" size="medium" expand="block" @click="logIn">Sign In</ion-button>
           </div>
 
-          <div class="form-footer" text-center>
+          <div class="form-footer ion-padding" text-center>
             <p>
               Not registered yet?
               <router-link to="/register" style="color: #00C853">Create an account</router-link>

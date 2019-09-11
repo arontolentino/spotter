@@ -4,6 +4,7 @@ import NavLayout from "./layouts/NavLayout.vue";
 import Login from "./views/Login.vue";
 import Register from "./views/Register.vue";
 import Entries from "./views/Entries.vue";
+import AddWorkout from "./views/AddWorkout.vue";
 
 Vue.use(IonicVueRouter);
 
@@ -24,6 +25,11 @@ export default new IonicVueRouter({
       path: "/register",
       name: "register",
       component: Register
+    },
+    {
+      path: "/entries/add",
+      name: "add-workout",
+      component: AddWorkout
     },
     {
       path: "/nav",
