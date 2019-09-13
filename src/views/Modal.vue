@@ -3,54 +3,62 @@
     <ion-header>
       <ion-toolbar color="dark">
         <ion-buttons
-          slot="secondary"
+          slot="start"
           class="ion-padding-horizontal"
           style="font-size=22px"
           @click="dismissModal()"
         >
-          <font-awesome-icon icon="times" />
+          <font-awesome-icon slot="start" icon="times" />
         </ion-buttons>
-        <ion-title>New Workout</ion-title>
+        <ion-title>Add Excercise</ion-title>
         <ion-buttons slot="primary" class="ion-padding-horizontal">
           <p style="color: #00C853">Create</p>
         </ion-buttons>
       </ion-toolbar>
+      <ion-toolbar>
+        <ion-searchbar></ion-searchbar>
+      </ion-toolbar>
     </ion-header>
-    <ion-content fullscreen padding scroll-y="false">
-      <ion-slides>
-        <ion-slide>
-          <h2>
-            Welcome to the
-            <b>ICA</b>
-          </h2>
-          <p>
-            The
-            <b>ionic conference app</b> is a practical preview of the ionic framework in action, and a demonstration of proper code use.
-          </p>
-        </ion-slide>
-
-        <ion-slide>
-          <h2>What is Ionic?</h2>
-          <p>
-            <b>Ionic Framework</b> is an open source SDK that enables developers to build high quality mobile apps with web technologies like HTML, CSS, and JavaScript.
-          </p>
-        </ion-slide>
-
-        <ion-slide>
-          <h2>What is Ionic Pro?</h2>
-          <p>
-            <b>Ionic Pro</b> is a powerful set of services and features built on top of Ionic Framework that brings a totally new level of app development agility to mobile dev teams.
-          </p>
-        </ion-slide>
-
-        <ion-slide>
-          <h2>Ready to Play?</h2>
-          <ion-button fill="clear">
-            Continue
-            <ion-icon slot="end" name="arrow-forward"></ion-icon>
-          </ion-button>
-        </ion-slide>
-      </ion-slides>
+    <ion-content>
+      <ion-list>
+        <ion-item>Amsterdam</ion-item>
+        <ion-item>Bogota</ion-item>
+        <ion-item>Buenos Aires</ion-item>
+        <ion-item>Cairo</ion-item>
+        <ion-item>Dhaka</ion-item>
+        <ion-item>Edinburgh</ion-item>
+        <ion-item>Geneva</ion-item>
+        <ion-item>Genoa</ion-item>
+        <ion-item>Glasglow</ion-item>
+        <ion-item>Hanoi</ion-item>
+        <ion-item>Hong Kong</ion-item>
+        <ion-item>Islamabad</ion-item>
+        <ion-item>Istanbul</ion-item>
+        <ion-item>Jakarta</ion-item>
+        <ion-item>Kiel</ion-item>
+        <ion-item>Kyoto</ion-item>
+        <ion-item>Le Havre</ion-item>
+        <ion-item>Lebanon</ion-item>
+        <ion-item>Lhasa</ion-item>
+        <ion-item>Lima</ion-item>
+        <ion-item>London</ion-item>
+        <ion-item>Los Angeles</ion-item>
+        <ion-item>Madrid</ion-item>
+        <ion-item>Manila</ion-item>
+        <ion-item>New York</ion-item>
+        <ion-item>Olympia</ion-item>
+        <ion-item>Oslo</ion-item>
+        <ion-item>Panama City</ion-item>
+        <ion-item>Peking</ion-item>
+        <ion-item>Philadelphia</ion-item>
+        <ion-item>San Francisco</ion-item>
+        <ion-item>Seoul</ion-item>
+        <ion-item>Taipeh</ion-item>
+        <ion-item>Tel Aviv</ion-item>
+        <ion-item>Tokio</ion-item>
+        <ion-item>Uelzen</ion-item>
+        <ion-item>Washington</ion-item>
+      </ion-list>
     </ion-content>
   </div>
 </template>
