@@ -21,7 +21,10 @@
         <ion-card-header>
           <ion-card-title>
             <ion-card-subtitle>Date</ion-card-subtitle>
-            <ion-datetime displayFormat="DDDD MMM D, YYYY" placeholder="Select Date"></ion-datetime>
+            <ion-datetime
+              displayFormat="DDDD MMM D, YYYY"
+              placeholder="Select Date"
+            ></ion-datetime>
           </ion-card-title>
         </ion-card-header>
       </ion-card>
@@ -68,16 +71,16 @@
 </template>
 
 <script>
-import Modal from "./Modal.vue";
+import Modal from './Modal.vue';
 
 export default {
-  name: "AddWorkout",
+  name: 'AddWorkout',
   props: {
-    title: { type: String, default: "Super Modal" }
+    title: { type: String, default: 'Super Modal' }
   },
   data() {
     return {
-      content: ""
+      content: ''
     };
   },
   methods: {
@@ -87,10 +90,10 @@ export default {
           component: Modal,
           componentProps: {
             data: {
-              content: "New Content"
+              content: 'New Content'
             },
             propsData: {
-              title: "New title"
+              title: 'New title'
             }
           }
         })

@@ -1,8 +1,8 @@
-import Vue from "vue";
-import Vuex from "vuex";
-import router from "@/router";
+import Vue from 'vue';
+import Vuex from 'vuex';
+import router from '@/router';
 
-const fb = require("@/firebase/index.js");
+const fb = require('@/firebase/index.js');
 
 Vue.use(Vuex);
 
@@ -32,9 +32,9 @@ export default new Vuex.Store({
       fb.auth
         .createUserWithEmailAndPassword(email, password)
         .then(user => {
-          commit("setUser", user);
-          commit("setIsAuthenticated", true);
-          console.log("User registered!");
+          commit('setUser', user);
+          commit('setIsAuthenticated', true);
+          console.log('User registered!');
 
           // fb.usersCollection
           //   .doc(state.user.user.uid)
@@ -46,11 +46,11 @@ export default new Vuex.Store({
           //     console.log("Additional user details added!");
           //   });
 
-          router.push("/login");
+          router.push('/login');
         })
         .catch(error => {
-          commit("setUser", null);
-          commit("setIsAuthenticated", false);
+          commit('setUser', null);
+          commit('setIsAuthenticated', false);
           console.log(error);
         });
     },
@@ -60,13 +60,13 @@ export default new Vuex.Store({
         .signInWithEmailAndPassword(email, password)
         .then(user => {
           console.log(user);
-          commit("setUser", user);
-          commit("setIsAuthenticated", true);
-          router.push("/entries");
+          commit('setUser', user);
+          commit('setIsAuthenticated', true);
+          router.push('/entries');
         })
         .catch(error => {
-          commit("setUser", null);
-          commit("setIsAuthenticated", false);
+          commit('setUser', null);
+          commit('setIsAuthenticated', false);
           console.log(error);
         });
     },
@@ -75,14 +75,14 @@ export default new Vuex.Store({
       fb.auth
         .signOut()
         .then(() => {
-          commit("setUser", null);
-          commit("setIsAuthenticated", false);
-          router.push("/login");
+          commit('setUser', null);
+          commit('setIsAuthenticated', false);
+          router.push('/login');
         })
         .catch(() => {
-          commit("setUser", null);
-          commit("setIsAuthenticated", false);
-          router.push("/login");
+          commit('setUser', null);
+          commit('setIsAuthenticated', false);
+          router.push('/login');
         });
     },
 
@@ -96,7 +96,7 @@ export default new Vuex.Store({
           uid: state.user.user.uid
         })
         .then(() => {
-          console.log("Success!");
+          console.log('Success!');
         });
     }
   }

@@ -20,7 +20,11 @@
 
             <div class="form-content"></div>
             <ion-item lines="none">
-              <ion-input type="email" placeholder="Email" @ionInput="email = $event.target.value"></ion-input>
+              <ion-input
+                type="email"
+                placeholder="Email"
+                @ionInput="email = $event.target.value"
+              ></ion-input>
             </ion-item>
 
             <ion-item lines="none">
@@ -31,13 +35,21 @@
               ></ion-input>
             </ion-item>
 
-            <ion-button class="form-button" size="medium" expand="block" @click="logIn">Sign In</ion-button>
+            <ion-button
+              class="form-button"
+              size="medium"
+              expand="block"
+              @click="logIn"
+              >Sign In</ion-button
+            >
           </div>
 
           <div class="form-footer ion-padding" text-center>
             <p>
               Not registered yet?
-              <router-link to="/register" style="color: #00C853">Create an account</router-link>
+              <router-link to="/register" style="color: #00C853"
+                >Create an account</router-link
+              >
             </p>
           </div>
         </ion-col>
@@ -48,18 +60,18 @@
 
 <script>
 export default {
-  name: "Login",
+  name: 'Login',
   data() {
     return {
-      email: "",
-      password: ""
+      email: '',
+      password: ''
     };
   },
   methods: {
     logIn() {
       console.log(this.email);
       console.log(this.password);
-      this.$store.dispatch("logIn", {
+      this.$store.dispatch('logIn', {
         email: this.email,
         password: this.password
       });

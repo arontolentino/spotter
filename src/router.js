@@ -1,44 +1,44 @@
-import Vue from "vue";
-import { IonicVueRouter } from "@ionic/vue";
-import NavLayout from "./layouts/NavLayout.vue";
-import Login from "./views/Login.vue";
-import Register from "./views/Register.vue";
-import Entries from "./views/Entries.vue";
-import AddWorkout from "./views/AddWorkout.vue";
+import Vue from 'vue';
+import { IonicVueRouter } from '@ionic/vue';
+import NavLayout from './layouts/NavLayout.vue';
+import Login from './views/Login.vue';
+import Register from './views/Register.vue';
+import Entries from './views/Entries.vue';
+import AddWorkout from './views/AddWorkout.vue';
 
 Vue.use(IonicVueRouter);
 
 export default new IonicVueRouter({
-  mode: "history",
+  mode: 'history',
   base: process.env.BASE_URL,
   routes: [
     {
-      path: "/",
-      redirect: "/login"
+      path: '/',
+      redirect: '/login'
     },
     {
-      path: "/login",
-      name: "login",
+      path: '/login',
+      name: 'login',
       component: Login
     },
     {
-      path: "/register",
-      name: "register",
+      path: '/register',
+      name: 'register',
       component: Register
     },
     {
-      path: "/entries/add",
-      name: "add-workout",
+      path: '/entries/add',
+      name: 'add-workout',
       component: AddWorkout
     },
     {
-      path: "/nav",
-      name: "nav",
+      path: '/nav',
+      name: 'nav',
       component: NavLayout,
       children: [
         {
-          path: "/entries",
-          name: "entries",
+          path: '/entries',
+          name: 'entries',
           component: Entries
         }
       ]

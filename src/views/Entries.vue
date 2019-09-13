@@ -1,7 +1,10 @@
 <template>
   <ion-content class="ion-text-left">
     <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-      <ion-fab-button color="success" @click="$router.push({name: 'add-workout'})">
+      <ion-fab-button
+        color="success"
+        @click="$router.push({ name: 'add-workout' })"
+      >
         <font-awesome-icon icon="plus" />
       </ion-fab-button>
     </ion-fab>
@@ -87,10 +90,10 @@
 </template>
 
 <script>
-import Modal from "./Modal.vue";
+import Modal from './Modal.vue';
 
 export default {
-  name: "Entries",
+  name: 'Entries',
   methods: {
     openModal() {
       return this.$ionic.modalController
@@ -98,10 +101,10 @@ export default {
           component: Modal,
           componentProps: {
             data: {
-              content: "New Content"
+              content: 'New Content'
             },
             propsData: {
-              title: "New title"
+              title: 'New title'
             }
           }
         })

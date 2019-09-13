@@ -65,13 +65,13 @@
 
 <script>
 export default {
-  name: "Modal",
+  name: 'Modal',
   props: {
-    title: { type: String, default: "Super Modal" }
+    title: { type: String, default: 'Super Modal' }
   },
   data() {
     return {
-      content: ""
+      content: ''
     };
   },
   methods: {
@@ -82,5 +82,4 @@ export default {
 };
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

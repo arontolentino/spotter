@@ -20,7 +20,11 @@
 
             <div class="form-content"></div>
             <ion-item lines="none">
-              <ion-input type="email" placeholder="Email" @ionInput="email = $event.target.value"></ion-input>
+              <ion-input
+                type="email"
+                placeholder="Email"
+                @ionInput="email = $event.target.value"
+              ></ion-input>
             </ion-item>
 
             <ion-item lines="none">
@@ -31,17 +35,28 @@
               ></ion-input>
             </ion-item>
 
-            <ion-button class="form-button" size="medium" expand="block" @click="signUp">Register</ion-button>
+            <ion-button
+              class="form-button"
+              size="medium"
+              expand="block"
+              @click="signUp"
+              >Register</ion-button
+            >
           </div>
 
           <div class="form-footer ion-padding" text-center>
             <p>
               By creating an account, you agree to the Spotter
               <span>
-                <router-link to="/" style="color: #00C853">Terms of Service</router-link>
-              </span> and
+                <router-link to="/" style="color: #00C853"
+                  >Terms of Service</router-link
+                >
+              </span>
+              and
               <span>
-                <router-link to="/" style="color: #00C853">Privacy Policy.</router-link>
+                <router-link to="/" style="color: #00C853"
+                  >Privacy Policy.</router-link
+                >
               </span>
             </p>
           </div>
@@ -53,18 +68,18 @@
 
 <script>
 export default {
-  name: "Login",
+  name: 'Login',
   data() {
     return {
-      email: "",
-      password: ""
+      email: '',
+      password: ''
     };
   },
   methods: {
     signUp() {
       console.log(this.email);
       console.log(this.password);
-      this.$store.dispatch("signUp", {
+      this.$store.dispatch('signUp', {
         email: this.email,
         password: this.password
       });

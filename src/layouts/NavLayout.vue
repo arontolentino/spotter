@@ -35,18 +35,18 @@
 </template>
 <script>
 export default {
-  name: "App",
+  name: 'App',
   data() {
     return {
-      items: [{ id: 0, name: "Ahmed" }, { id: 1, name: "Naima" }]
+      items: [{ id: 0, name: 'Ahmed' }, { id: 1, name: 'Naima' }]
     };
   },
   methods: {
     openStart() {
-      document.querySelector("ion-menu-controller").open("start");
+      document.querySelector('ion-menu-controller').open('start');
     },
     openEnd() {
-      document.querySelector("ion-menu-controller").open("end");
+      document.querySelector('ion-menu-controller').open('end');
     }
   }
 };
